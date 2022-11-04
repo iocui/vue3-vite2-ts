@@ -1,0 +1,57 @@
+{
+  "Vue-ts快速生成模板": {
+    "scope": "vue",
+    "prefix": "vue3",
+    "body": [
+      "<script setup lang='ts' name='$1'>",
+      "defineProps<{ msg?: string }>()",
+      "const count = ref(0)",
+      "</script>",
+      "",
+      "<template>",
+      "\t<div @click='count++'>{{ count }}</div>",
+      "</template>",
+      "",
+      "<style scoped lang='scss'></style>"
+    ],
+    "description": "Log output to console"
+  },
+  "store快速生成脚本": {
+    "scope": "typescript",
+    "prefix": "store",
+    "body": [
+      "import { defineStore } from 'pinia'",
+      "import { piniaStore } from '@store'",
+      "",
+      "export const use$1Store = defineStore(",
+      "    '${1/(.*)/${1:/camelcase}/}',",
+      "    {",
+      "        state: () => ({}),",
+      "        getters: {},",
+      "        actions: {}",
+      "    }",
+      ")",
+      "",
+      "export function use$1OutsideStore() {",
+      "    return use$1Store(piniaStore)",
+      "}"
+    ],
+    "description": "store page"
+  },
+  "iconfont图标": {
+    "prefix": "icon-font",
+    "body": ["<icon-font name=\"${0}\" />"]
+  },
+  "iconify图标": {
+    "prefix": "icon-svg",
+    "body": ["<icon-svg-${0} />"]
+  },
+  "router链接": {
+    "prefix": "rl",
+    "body": ["<router-link to=\"${0}\"></router-link>"]
+  },
+  "router路由配置": {
+    "prefix": "ry",
+    "body": ["<!-- 路由设置 -->", "<route lang=\"yaml\">", "meta:", "\ttitle: '页面标题'", "\tlayout: 'blank'", "</route>"]
+  }
+}

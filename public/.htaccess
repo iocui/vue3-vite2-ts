@@ -1,0 +1,11 @@
+RewriteEngine On
+
+#----------------------
+#目录级重写的基准URL路径
+#----------------------
+#RewriteBase /dist/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ ./index.html [L]

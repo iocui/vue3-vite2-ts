@@ -1,0 +1,39 @@
+{
+  //===================================================================================================
+  // TypeScript4.5.x项目配置，把通常不用修改的基础配置抽离到 ./config/modules/tsconfig.base.json 文件并引入
+  //===================================================================================================
+  "extends": "./config/modules/tsconfig.base.json",
+  "compilerOptions": {
+    // 模块基本目录路径，./ 表示当前文件根
+    "baseUrl": "./",
+    // 路径映射, 别名到基于baseUrl的路径，便于vscode之类IDE(集成开发环境)识别
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["src/*"],
+      "~@/*": ["config/modules/*"]
+    },
+    // TS需要引用的库(即声明文件)，es5 默认引用dom、es5、scripthost, 如需要使用es的高级版本特性，通常都需要配置，如es8的数组新特性需要引入"ES2019.Array"
+    "lib": [
+      "ESNext", //下一代ES环境高级特性
+      "DOM", //dom运行环境
+      "DOM.Iterable", //迭代器运行环境
+      "ScriptHost" //宿主系统环境
+    ],
+    // 项目需要提前加载的声明文件扩展包
+    "types": ["node", "vite/client", "pinia-plugin-persist"]
+  },
+  // TS编译器需要排除的文件或文件夹
+  "exclude": ["dist", "node_modules", "**/*.js"],
+  // TS编译器需要编译的文件或目录
+  "include": [
+    "package.json",
+    "vite.config.ts",
+    "config/types/*.d.ts",
+    "config/bootstrap/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/*.ts"
+  ]
+}

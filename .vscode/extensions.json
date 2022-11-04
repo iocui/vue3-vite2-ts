@@ -1,0 +1,23 @@
+{
+  // 使用本脚手架开发VUE项目所推荐非常好用的 VS Code 插件扩展包
+  "recommendations": [
+    "MS-CEINTL.vscode-language-pack-zh-hans", //vscode中文汉化
+    "PKief.material-icon-theme", //侧边资源管理器文件夹 Material Icons 主题
+    "ritwickdey.LiveServer", //静态服务容器
+    "wix.vscode-import-cost", //实时内联方式显示导入包的大小
+    "dbaeumer.vscode-eslint", //ES代码标准化
+    "esbenp.prettier-vscode", //代码格式化扩展
+    "formulahendry.auto-rename-tag", //自动同步修改结束标签
+    "vue.volar", //为 Vue、Vitepress 和 petite-vue 构建的语言支持扩展
+    "dariofuzinato.vue-peek", //加强VUE SFC 组件模块 F12 跟踪
+    "mikestead.dotenv", //.env 文件语法高亮显示
+    "steoates.autoimport", //自动生成导入语句, 适用于 Typescript 和 TSX
+    "aaron-bond.better-comments", //美化注释，突显强调
+    "christian-kohler.path-intellisense", //路径智能感知, 方便填允路径场景
+    "adpyke.codesnap", //代码生成漂亮的图片
+    "voorjaar.windicss-intellisense", //windicss样式助手
+    "Lokalise.i18n-ally", //国际语可视化助手
+    "afzalsayed96.icones", //线上图标库，方便查找图标
+    "antfu.iconify" //图标可视化助手
+  ]
+}

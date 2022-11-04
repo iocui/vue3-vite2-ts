@@ -1,0 +1,67 @@
+{
+  //==============================================================================================
+  // TypeScript 基础配置 See https://www.typescriptlang.org/docs/handbook/compiler-options.html
+  //==============================================================================================
+  "compilerOptions": {
+    // 编译目标的语言版本 Vue 3 supports ES2016+
+    // - For Vite, the actual compilation target is determined by the
+    // - `build.target` option in the Vite config.
+    // - So don't change the `target` field here. It has to be
+    // - at least `ES2020` for dynamic `import()`s and `import.meta` to work correctly.
+    // - If you are not using Vite, feel free to override the `target` field.
+    "target": "esnext",
+    // 生成代码的模板标准
+    "module": "esnext",
+    //是否允许在ts文件中引入js
+    "allowJs": true,
+    // 是否允许使用 export = {} 导出，由 import from 对导入 CommonJS 模块的支持，需要同时开启 allowSyntheticDefaultImports 项
+    "esModuleInterop": true,
+    // 是否允许合成缺省导入, 当模块没有默认导出时，允许"从 y 导入 x"
+    "allowSyntheticDefaultImports": true,
+    // 是否区分文件名大小写
+    "forceConsistentCasingInFileNames": true,
+    // 是否允许从模块文件访问使用 UMD 全局变量
+    "allowUmdGlobalAccess": true,
+    // 按照node的模块解析策略去找文件, ts默认用node的解析策略, 即相对路径方式导入规则
+    "moduleResolution": "node",
+    // 是否编译构建引用项目, SPA Web 独立项止不要设为true, 无法通过 vue-tsc 法语检查, 会报“incremental mode is not yet support”错
+    "composite": false,
+    // 是否允许把json文件当做模块进行解析
+    "resolveJsonModule": true,
+    // TypeScript 3.7.0 中新增的一个编译选项（详见 PR https://github.com/microsoft/TypeScript/pull/33509）, 启用后的作用是将 class 声明中的字段语义从 [[Set]] 变更到 [[Define]]
+    "useDefineForClassFields": true,
+    // 指定jsx代码用于的开发环境: 'preserve', 'react-native', or 'react', Required in Vue projects use 'preserve'
+    "jsx": "preserve",
+    // 是否开启所有严格的类型检查
+    "strict": true,
+    // 用来指定编译时是否生成.map文件源映射文件
+    "sourceMap": true,
+    // 是否将每个文件作为单独的模块(Required in Vite use true)
+    "isolatedModules": true,
+    // 支持 `<script setup>` 用法, See <https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#preserve-value-imports>
+    "preserveValueImports": true,
+    // 强制对类型使用时要用 “import type” 而不是直接 “import”
+    "importsNotUsedAsValues": "error",
+    // 是否跳过声明文件的检查, See <https://github.com/vuejs/vue-cli/pull/5688>
+    "skipLibCheck": true,
+    // 类型检查空值和null、undefined, 如果为false，则不检查空值和null、undefined, 不建议设置为false
+    "strictNullChecks": true,
+    // 为具有隐含类型的表达式和声明启用错误报告
+    "noImplicitAny": true,
+    // 是否允许this有隐式的any类型
+    "noImplicitThis": true,
+    // 用于检查函数是否有返回值，设为true后，如果函数没有返回值则会提示
+    "noImplicitReturns": true,
+    // 是否禁止显示 noImplicit 在为缺少索引签名的对象编制索引时出现任何错误
+    "suppressImplicitAnyIndexErrors": true,
+    //实现依赖注入编程思维, 需要 inversify 和 reflect-metadata 包
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": ["dom", "es6"],
+    "types": ["reflect-metadata"]
+  }
+  // vscode volar 支持 Vue 2 模板使用 TS 语法 see https://github.com/johnsoncodehk/volar/pull/351
+  // "vueCompilerOptions": {
+  //   "experimentalCompatMode": 2
+  // }
+}

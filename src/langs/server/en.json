@@ -1,0 +1,16 @@
+{
+  "errMsg400": "Bad request",
+  "errMsg401": "Unauthorized, please log in again",
+  "errMsg403": "access denied",
+  "errMsg404": "Error in request",
+  "errMsg405": "Request method not allowed",
+  "errMsg408": "Request timed out",
+  "errMsg500": "Server Error",
+  "errMsg501": "service not implemented",
+  "errMsg502": "Network Error",
+  "errMsg503": "service is not available",
+  "errMsg504": "network timeout",
+  "errMsg505": "Http version does not support the request",
+  "errMsgTip": "Please try again later!",
+  "timeout": "Request timed out"
+}

@@ -1,0 +1,92 @@
+/* 全局基础样式 */
+html {
+  background: #fcfcfc;
+}
+
+/* 黑暗模式 */
+html.dark {
+  color-scheme: dark;
+  background: #121212;
+}
+
+/* 色弱模式 */
+html.weak {
+  filter: invert(80%);
+  background: #121212;
+}
+
+/* 灰调模式 */
+html.gray {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+}
+
+/* 超链接去掉下划线*/
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* 文本框自动填值后的背景色 */
+input {
+  padding: 0 4px;
+  border-width: 1px;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+}
+
+/* 去掉windicss块状化 */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: inline-block;
+  vertical-align: inherit;
+}
+
+/* 修正图标与文字的水平位 */
+svg.svgicon,
+svg.icon,
+i.iconfont {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  overflow: visible;
+  fill: currentColor;
+  text-align: center;
+  transform: translateZ(0);
+}
+svg.svgicon,
+svg.icon {
+  vertical-align: -0.158em;
+}
+i.iconfont {
+  font-size: inherit;
+}
+
+/* 路由切换loading样式 */
+#nprogress {
+  pointer-events: none;
+}
+#nprogress .bar {
+  background: #2563eb;
+  opacity: 0.75;
+  position: fixed;
+  z-index: 5999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
