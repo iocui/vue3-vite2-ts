@@ -41,12 +41,12 @@ Vue3 and Typescript in Vite2+ 全新写法，让前端开发舒畅无比，一�
 
 # 如何使用
 
-非常欢迎您的加入！[提一个 Issue](https://gitee.com/iocui/vue3-vite2-ts/issues)
+非常欢迎您的加入！[提一个 Issue](https://github.com/iocui/vue3-vite2-ts/issues)
 
 ## 下载
 
 ```
-git clone https://gitee.com/iocui/vue3-vite2-ts.git
+git clone https://github.com/iocui/vue3-vite2-ts
 ```
 
 ## 进入项目文件夹
