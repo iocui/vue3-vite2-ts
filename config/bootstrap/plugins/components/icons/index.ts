@@ -18,7 +18,6 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 import { version as vueVersion } from 'vue/package.json';
 
 import { iconToSVG } from '@iconify/utils/lib/svg/build';
-import { defaults } from '@iconify/utils/lib/customisations';
 import { getIconData } from '@iconify/utils/lib/icon-set/get-icon';
 
 import collections from './collections';
@@ -132,7 +131,13 @@ export default (options: viteUserOptions) => {
                 const iconData = getIconData(iconsJson, icons, true);
                 if (iconData) {
                   const renderData = iconToSVG(iconData, {
-                    ...defaults,
+                    inline: false,
+                    hAlign: 'center',
+                    vAlign: 'middle',
+                    slice: false,
+                    hFlip: false,
+                    vFlip: false,
+                    rotate: 0,
                     height: `${scale}em`,
                     width: `${scale}em`
                   });

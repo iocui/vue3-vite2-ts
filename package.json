@@ -33,6 +33,7 @@
     "vue-router": "^4.1.1"
   },
   "devDependencies": {
+    "@iconify/utils": "^2.0.2",
     "@intlify/vite-plugin-vue-i18n": "^5.0.0",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/lodash": "^4.14.182",
